@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運送資訊</title>
+    <link rel="stylesheet" href="reset css.css">
+    <link rel="stylesheet" href="Topic2.css">
+    <style>
+        .detailsrow {
+            margin-bottom: 0;
+        }
+
+        input {
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <span class="webname">The Reader 閱讀者</span>
+            <nav class="toprow">
+                <a href="#">使用說明</a>
+                <a href="#">常見問題</a>
+                <a href="#">關於我們</a>
+                <a href="#">會員登入</a>
+            </nav>
+        </div>
+        <div class="secondtitle">
+            <div class="logo">
+                <img src="logo2.png" alt="logo2">
+            </div>
+            <span class="the">THE</span>
+            <span class="reader">Reader</span>
+        </div>
+        <div class="guide">
+            <nav class="Classification">
+                <a href="#">新書</a>
+                <a href="#">中文</a>
+                <a href="#">外文</a>
+                <a href="#">購書</a>
+            </nav>
+        </div>
+        <div class="search">
+            <input class="searchbar" type="text" name="search" id="serach" placeholder="書名、作者">
+            <button class="search-btn"><img src="search.png" alt="search" width="10px"></button>
+        </div>
+    </header>
+
+    <div class="details">
+        <div class="detailsrow">
+            購物明細
+        </div>
+        <div class="checkout">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    便利商店取貨
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    宅配
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="details">
+        <div class="detailsrow">
+            選擇付款方式
+        </div>
+        <div class="paychoice">
+            <div class="pay-check">
+                <input class="pay-check-input" type="radio" name="pay-check-input" id="pay-check-input">
+                <label class="pay-check-label" for="flexRadioDefault1">
+                    便利商店取貨付款
+                </label>
+            </div>
+            <div class="pay-check">
+                <input class="pay-check-input" type="radio" name="pay-check-input" id="pay-check-input" checked>
+                <label class="pay-check-label" for="flexRadioDefault2">
+                    線上刷卡
+                </label>
+            </div>
+            <div class="pay-check">
+                <input class="pay-check-input" type="radio" name="pay-check-input" id="pay-check-input" checked>
+                <label class="pay-check-label" for="flexRadioDefault2">
+                    Line pay
+                </label>
+            </div>
+            <div class="pay-check">
+                <input class="pay-check-input" type="radio" name="pay-check-input" id="pay-check-input" checked>
+                <label class="pay-check-label" for="flexRadioDefault2">
+                    悠遊卡
+                </label>
+            </div>
+            <div class="pay-check">
+                <input class="pay-check-input" type="radio" name="pay-check-input" id="pay-check-input" checked>
+                <label class="pay-check-label" for="flexRadioDefault2">
+                    ATM付款
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="detailsrow">
+            訂購人資訊
+        </div>
+    </div>
+    <div class="information">
+        <div>姓名 <input type="text" style="margin-left: 17px;"></div>
+        <div>手機 <input type="tel" style="margin-left: 17px;"></div>
+        <div>E-mail<input type="email" style="margin-left: 10px;"></div>
+    </div>
+    <div class="details">
+        <div class="detailsrow">
+            發票
+        </div>
+        <div class="bill">
+            <div class="billrow">
+                <input class="bill-input" type="radio" name="bill-input" id="bill-input">
+                <label class="bill-label" for="flexRadioDefault1">
+                    捐贈發票
+                </label>
+            </div>
+            <div class="bill-input">
+                <input class="bill-input" type="radio" name="bill-input" id="bill-input" checked>
+                <label class="bill-label" for="flexRadioDefault2">
+                    二聯電子發票
+                </label>
+            </div>
+            <div class="bill-input">
+                <input class="bill-input" type="radio" name="bill-input" id="bill-input" checked>
+                <label class="bill-label" for="flexRadioDefault2">
+                    三聯電子發票
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="finalbtn">
+        <div class="previouspage"><a href="buybook.html">回上一頁</a></div>
+        <div class="final"><a href="">完成訂購</a></div>
+    </div>
+    <footer>
+        <div class="foot">
+            <div class="publishinghouse"></div>
+            <a href="https://www.bookrep.com.tw/?md=gwindex&cl=index&at=index"><img src="RB.jpg" alt="Rb" width="100"
+                    height='100'></a>
+            <a href="https://www.cite.com.tw/publisher/about/17"><img src="marcobolo.jpg" alt="marcobolo" width="100"
+                    height='100'></a>
+            <a href="https://www.linkingbooks.com.tw/LNB/index.aspx"><img src="linkin.png" alt="linkin" width="100"
+                    height='100'></a>
+            <a href=""><img src="acro polis.jpg" alt="acro" width="100" height='100'></a>
+            <a href="https://www.cite.com.tw/publisher/about/13"><img src="Owl.png" alt="owl" width="100"
+                    height='100'></a>
+            <a href="https://www.cite.com.tw/publisher/about/1"><img src="wheatfield.jpg" alt="wheatfield" width="100"
+                    height='100'></a>
+        </div>
+    </footer>
+</body>
+
+</html>

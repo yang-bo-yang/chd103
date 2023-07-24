@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購書</title>
+    <link rel="stylesheet" href="reset css.css">
+    <link rel="stylesheet" href="Topic2.css">
+    <style>
+        .delete {
+            color: white;
+            font-size: 20px;
+            background-color: #B50000;
+            border: white;
+            margin-left: 160px;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            padding-top: 5px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <span class="webname">The Reader 閱讀者</span>
+            <nav class="toprow">
+                <a href="#">使用說明</a>
+                <a href="#">常見問題</a>
+                <a href="#">關於我們</a>
+                <a href="login.html">會員登入</a>
+            </nav>
+        </div>
+        <div class="secondtitle">
+            <div class="logo">
+                <img src="logo2.png" alt="logo2">
+            </div>
+            <span class="the">THE</span>
+            <span class="reader">Reader</span>
+        </div>
+        <div class="guide">
+            <nav class="Classification">
+                <a href="#">新書</a>
+                <a href="chbook.html">中文</a>
+                <a href="#">外文</a>
+                <a href="#">購書</a>
+            </nav>
+        </div>
+        <div class="search">
+            <input class="searchbar" type="text" name="search" id="serach" placeholder="書名、作者">
+            <button class="search-btn"><img src="search.png" alt="search" width="10px"></button>
+        </div>
+        <div class="details">
+            <div class="detailsrow">
+                購物明細
+            </div>
+            <div class="shooppingrow">
+                <span><span></span>商品明細<span>價格<span>數量<span>庫存</span></span><span>變更明細</span></span></span></span>
+            </div>
+            <div class="commodityframe">
+                <img src="The Hollow Crown.png" alt="The Hollow Crown" width="200" height='200'>
+                <p style="padding-right: 125px;font-size: 15px;">空王冠</p>
+                <!-- <div class="discount" style="color: black;font-size:10px ;">優惠期限至2023/7/28</div> -->
+                <p style="padding-right: 110px;">$560</p>
+                <form id='myform' method='POST' action='#' style="padding-right: 120px;">
+                    <label for=""> </label><input type='button' value='-' class='qtyminus' field='quantity' /><!--
+                    --><input type='text' name='quantity' value='0' class='qty' /><!--
+                --><input type='button' value='+' class='qtyplus' field='quantity' />
+                </form>
+                <p>有</p>
+                <button class="delete">刪除</button>
+            </div>
+        </div>
+        <div class="buycolorblock">
+            <div class="total">
+                <p>共<span>1</span>項商品，數量<span>1</span>個</p>
+                <p>運費 NT$<span>30</span>元</p>
+                <p>金額 NT$<span>590</span>元</p>
+            </div>
+        </div>
+        <div class="details">
+            <div class="detailsrow">
+                重要提醒
+            </div>
+            <div class="commodityframe">
+                <ul>
+                    <li>選擇『便利商店取貨』，單次實際付款金額未滿350元加收40元處理費</li>
+                    <li>選擇『宅配到府』，單次實際付款金額未滿490元加收75元處理費，490～999元加收50元處理費；滿1,000元免處理費(金額計算，不包含滿額出貨廠商區)。</li>
+                    <li>商品體積較大或多於15項，可能不適用『便利商店取貨』。</li>
+                    <li>結帳選項若無出現「海外店取」，可能是購買商品不適用此服務。</li>
+                    <li>海外郵資運費計算。</li>
+                    <li>選擇『宅配到府』，訂購品項皆有『快速到貨』標籤且商品、贈品皆有庫存，於當日00:00~09:00付款完成(週六、週日及國定假日不適用此方案)，配送地點為【台北市/新北市/基隆市】地區即符合快速到貨服務。
+                    </li>
+                </ul>
+            </div>
+            <div class="checkoutbtn"><a href="transportInformation.html">結帳</a>
+
+            </div>
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="publishinghouse"></div>
+                <a href="https://www.bookrep.com.tw/?md=gwindex&cl=index&at=index"><img src="RB.jpg" alt="Rb"
+                        width="100" height='100'></a>
+                <a href="https://www.cite.com.tw/publisher/about/17"><img src="marcobolo.jpg" alt="marcobolo"
+                        width="100" height='100'></a>
+                <a href="https://www.linkingbooks.com.tw/LNB/index.aspx"><img src="linkin.png" alt="linkin" width="100"
+                        height='100'></a>
+                <a href=""><img src="acro polis.jpg" alt="acro" width="100" height='100'></a>
+                <a href="https://www.cite.com.tw/publisher/about/13"><img src="Owl.png" alt="owl" width="100"
+                        height='100'></a>
+                <a href="https://www.cite.com.tw/publisher/about/1"><img src="wheatfield.jpg" alt="wheatfield"
+                        width="100" height='100'></a>
+            </div>
+        </footer>
+</body>
+
+</html>

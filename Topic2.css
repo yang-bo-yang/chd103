@@ -142,6 +142,10 @@ span  {
 .weeklybest a{
     text-decoration:none;
 }
+.more a{
+    margin-left: 90%;
+    font-size: 20px;
+}
 .review{
     margin: 5%;
     background-color: #00206a;
@@ -218,60 +222,343 @@ footer{
     position: relative;
     background-color: aliceblue;
 }
-/* .LogIn a { 
-    color: black;
-    position:relative;
-    display: block;
-    left: 290%;
-    bottom: 50%;
+.login  { 
+    width: 250px;
     background-color: aliceblue;
-    width: 50%;
-    height: 50px;
-    gap:50px;
-}  */
-.sign{
+    margin-bottom: 20px;
+    margin-top: -90%;
+    margin-left: 260%;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    font-size: 30px;
+    border-radius:20px 0 0px 20px ;
+}  
+.signup{
+    width: 200px;
     background-color: aliceblue;
-    font-size: 20px;
-    color: black;
-    justify-content: center;
-    text-decoration:none;
-    position: absolute;
-    width: 90%;
-    padding: 5%;
-    font-size: 20px;
-    text-align: center;
-    top: 65%;
-    left: 280%;
-    border-radius:20px/20px ;
+    margin-bottom: 20px;
+    margin-left: 278%;
+    padding-left:30px ;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    font-size: 30px;
+    border-radius:20px 0 0px 20px ;
 }
-.Forget{
+.forgetpassword{
+    width: 250px;
     background-color: aliceblue;
-    font-size: 20px;
-    color: black;
-    justify-content: center;
-    text-decoration:none;
-    position: absolute;
-    width: 100%;
-    padding: 5%;
-    font-size: 20px;
-    text-align: center;
-    top: 78%;
-    left: 270%;
-    border-radius:20px/20px ;
+    margin-left: 260%;
+    margin-bottom: 40%;
+    padding-left:30px;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    font-size: 30px;
+    border-radius:20px 0 0px 20px ;
 } 
 /* 中文書簡介頁面 */
 h1{
     font-size: 20px;
-     margin:20px ; 
+    margin:20px ; 
+    border: white;
+    background-color: #B50000;
+    color: aliceblue;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
 }
+h2{
+    display: block;
+    height: 30px;
+    border: white;
+    background-color: #B50000;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom:10px ; 
+}
+
 .chbookpicfirst {
     display: flex;
 }
 .chcard a img{
-    margin: 5%;
+    margin-left: 10%;
+    margin-bottom:100px ;
 }
-.chbookpicfirst p{
+
+.Introduction{
+    margin-left: 20px;
     width: 50%;
+}
+.chshortreiview{
+    background-color: #00206a;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px; 
+    width: 80%;
+    border-radius: 30px;
+    height: 100px;
+    font-size: 18px;
+}
+/* 書內容頁面 */
+.bookpagetitle{
+    color: black;
+    font-size: 30px;
+    margin-left: 11%;
     
+}
+.bookpageimg{
+    /* margin-left: -10%; */
+    margin-top:10px ;
+    display: flex;
+}
+.bookpageimg ul li{
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+.bookpageul{
+    font-size: 20px;
+}
+span.instock{
+    color: #B50000;
+}
+.scoreandbuy {
+    border-radius: 10%;
+    background-color:#00206a ;
+    margin-left: 40%;
+    text-align: center;
+    color: aliceblue;
+    width: 20%;
+    height: 20%;
+}
+.scoreandbuy a{
+    text-decoration: none;
+}
+.shoppingcart{
+    background-color: gold;
+    border-radius: 10%;
+    padding: 15px;
+    margin:20px ;
+    width: auto;
+}
+.directbuy{
+    background-color: #F28500;
+    border-radius: 10%;
+    padding: 10px;
+    margin:20px ;
+    width: auto;
+}
+.bookIntroductionrow{
+    background-color: #B50000;
+    color:white;
+    width: 80%;
+    margin-top: 10%;
+}
+.bookIntroduction p{
+    font-size: 20px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+.bookpageshortreiview span{
+    color: black;
+    font-size: 20px;
+}
+.bookpageshortreiview p{
+    width: 80%;
+    font-size: 20px;
+    border-bottom:2px solid #B50000;
+    margin-top: 10px;
+}
+.bookpagelongtreiview{
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 20%;
+}
+.bookpagelongtreiview span{
+    font-size: 20px;
+    width: 80%;
+    color: black;
+}
+#divturnoff{
+    width: 100%;
+}
+.open{
+    color: #00206a;
+    border-bottom: #B50000;
+    margin-bottom: 50px;
+}
+/* 購物車 */
+.detailsrow{
+    background-color: #B50000;
+    color:white;
+    width: 20%;
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    padding: 1%;
+    text-align: center;
+    border-radius:10px 10px 0 0;
+}
+.shooppingrow span{
+    background-color: #00206a;
+    margin-left:126px ;
+    font-size: 20px;
+    padding: 10px;
+}
+.commodityframe{
+    border:2px solid rgb(209, 210, 209);
+    margin-left: 128px;
+    margin-right:110px ;
+    margin-top: 20px;
+    display: flex;
+}
+.commodityframe p{
+    margin-top:10px ;
+    font-size: 20px;
+}
+span .discount{
+    color: black;
+}
+.shoopbookname p{
+    padding-right: 30px;
+}
+.qty {
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    border: 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+input.qtyplus {
+    width: 25px;
+    height: 35px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+}
+input.qtyminus {
+    width: 25px;
+    height: 35px;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+}
+.buycolorblock{
+    background-color: #00206a;
+    width: 79%;
+    padding: 15px;
+    margin-left: 127px;
+    margin-top: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+.total{
+    padding-left: 80%;
+}
+.total span{
+    color: #F28500;
+    font-size: 40px;
+}
+.total p{
+    color: white;
+    font-size: 20px;
+    
+}
+.checkoutbtn{
+    background-color: gold;
+    width: 150px;
+    height: 50px;
+    font-size: 40px;
+    padding-top: 15px;
+    margin-top: 20px;
+    margin-left: 80%;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    text-align: center;
+}
+/* 運送資訊 */
+.form-check{
+    font-size: 20px;
+    padding-bottom:10px;
+    color: black;
+}
+.checkout{
+    background-color: white;
+    height: 100%;
+    display: block;
+    width: 70%;
+    margin-left: 10%;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.information{
+    background-color: white;
+    height: 100%;
+    display: block;
+    width: 70%;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.paychoice{
+    background-color: white;
+    height: 100%;
+    display: block;
+    width: 70%;
+    margin-left: 10%;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.bill{
+    background-color: white;
+    height: 100%;
+    display: block;
+    width: 70%;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.finalbtn{
+    display: flex;
+}
+.previouspage{
+    font-size: 20px;
+    width: 200px;
+    margin-left: 50%;
+    margin-top: 40px;
+    margin-bottom: 10%;
+    background-color: #c0c0c0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: #f8f8f8;
+    border-radius: 10px;
+    text-align: center;
+}
+.final{
+    font-size: 20px;
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: 10%;
+    background-color: gold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: #f8f8f8;
+    border-radius: 10px;
+    text-align: center;
 }
 
