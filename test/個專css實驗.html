@@ -1,0 +1,928 @@
+<!-- <div class="carousel">
+    <div class="container">
+        <a href="" target="_blank"><img src="The Plantagenets.png" /></a>
+        <a href="" target="_blank"><img src="The Plantagenets.png" /></a>
+        <a href="" target="_blank"><img src="The Plantagenets.png" /></a>
+    </div>
+    <div class="shift">
+        <div class="btn left" onclick="leftshift()">&lt;</div>
+        <div class="btn right" onclick="rightshift()">&gt;</div>
+    </div>
+    <div class="bottom"></div>
+    <style>
+        .carousel {
+            width: 1000px;
+            height: 300px;
+
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel .container {
+            height: 100%;
+            width: 1000px;
+
+
+            position: relative;
+            left: 0px;
+
+            display: flex;
+
+            transition: all 1s;
+        }
+
+        .carousel .container a {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+
+        }
+
+        .carousel .container a img {
+            width: 100%;
+            height: 100%;
+
+
+            object-fit: cover;
+        }
+
+        .carousel .shift .btn {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+
+            background-color: black;
+            color: aliceblue;
+
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+
+            font-size: 40px;
+            font-weight: bold;
+
+            line-height: 50px;
+            text-align: center;
+
+            cursor: pointer;
+
+            user-select: none;
+
+            opacity: 0.5;
+        }
+
+        .bottom {
+            display: flex;
+
+            gap: 10px;
+        }
+
+        .bottom .indicator {
+            height: 5px;
+            width: 40px;
+
+            background-color: black;
+
+            cursor: pointer;
+
+            user-select: none;
+        }
+
+        .carousel .shift .left {
+            left: 20px;
+        }
+
+        .carousel .shift .right {
+            right: 20px;
+        }
+
+        .carousel .bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: max-content;
+            display: flex;
+            gap: 10px;
+        }
+
+        .carousel .bottom .indicator {
+            height: 5px;
+            width: 40px;
+
+            background-color: black;
+
+            opacity: 0.5;
+
+            cursor: pointer;
+        }
+
+        .curousel:hover .bottom .indicator {
+            opacity: 1;
+        }
+
+        .curousel:hover .shift .btn {
+            opacity: 1;
+        }
+    </style>
+    <script>
+
+
+        let index = 0
+
+        let imageCount = document.querySelectorAll(
+            ".carousel .container img"
+        ).length
+
+        const bottom = document.querySelector(".carousel .bottom")
+        for (let i = 0; i < imageCount; i++) {
+            const indicator = document.createElement("div")
+            indicator.classList.add("indicator")
+            indicator.onclick = () => setIndex(i)
+
+            bottom.append(indicator)
+        }
+
+        setInterval(() => {
+            index++
+            refresh()
+        }, 3000)
+
+        function refresh() {
+            if (index < 0) {
+
+
+                index = imageCount - 1
+            } else if (index >= imageCount) {
+
+
+                index = 0
+            }
+
+
+            let carousel = document.querySelector(".carousel")
+
+            // 注意
+            let width = getComputedStyle(carousel).width
+            width = Number(width.slice(0, -2))
+            console.log(width)
+
+            carousel.querySelector(".container").style.left =
+                index * width * -1 + "px"
+        }
+        let refreshWrapper = (func) => {
+            return function (...args) {
+                let result = func(...args)
+                refresh()
+                return result
+            }
+        }
+
+        let leftshift = refreshWrapper(() => {
+            index--
+        })
+        let rightshift = refreshWrapper(() => {
+            index++
+        })
+
+        let setIndex = refreshWrapper((idx) => {
+            index = idx
+        })
+        refresh()
+    </script>
+    </head>
+
+    <body> -->
+
+
+
+
+
+
+
+
+
+<!-- <header>
+        <div class="title">
+            <span class="webname">The Reader 閱讀者</span>
+            <nav class="toprow">
+                <a href="#">使用說明</a>
+                <a href="#">常見問題</a>
+                <a href="#">關於我們</a>
+                <a href="login.html">會員登入</a>
+            </nav>
+        </div>
+        <div class="secondtitle">
+            <div class="logo">
+                <img src="logo1.png" alt="logo1">
+            </div>
+            <span class="the">THE</span>
+            <span class="reader">Reader</span>
+        </div>
+        <div class="guide">
+            <nav class="Classification">
+                <a href="#">新書</a>
+                <a href="chbook.html">中文</a>
+                <a href="#">外文</a>
+                <a href="#">購書</a>
+            </nav>
+        </div>
+        <div class="search">
+            <input class="searchbar" type="text" name="search" id="serach" placeholder="書名、作者">
+            <button class="search-btn"><img src="search.png" alt="search" width="10px"></button>
+        </div>
+        <script>
+            function turnoff(n) {
+                var s = document.getElementById(n).style;
+                s.display = (s.display == 'none') ? '' : 'none';
+            }
+        </script>
+
+        <div title="展開/收起" onclick="turnoff('divturnoff');">展開/收起</div>
+        <div id="divturnoff" style="display: none;">
+            在英國歷史上，都鐸王朝憑借足料的八卦顯得格外搶眼，“童貞女王”、亨利八世情史，都為人津津樂道，“玫瑰戰爭”更是用一種童話式的浪漫俘獲一眾民心。
+            從一個毫不起眼、來歷不明的小貴族，躍升至國王之尊，都鐸家族的崛起堪稱奇跡。
+
+            不得不說，都鐸家的善投機和“紅皇后”的懂生存，真是個絕妙組合。 在風雨飄搖的金雀花王朝末期，都鐸家族就是憑藉這種務實的組合步步為營。 而「玫瑰戰爭」這個分外浪漫的說辭，則是都鐸家族為自己披上的最華麗外衣。
+            因為都鐸家族從一開始就諳熟宣傳要義——人們愛故事，勝過愛真相。
+
+            玫瑰戰爭的真相到底是怎樣的呢？ 廣受歡迎的丹•鐘斯在《空王冠》中大膽敘述了整個過程的來龍去脈，也提出了一些頗有見地的看法。
+            眾所周知，丹•鐘斯是專攻中世紀史的歷史學家，這本《空王冠》也可以說是《金雀花王朝》的續集。
+        </div> -->
+
+
+<!-- <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title> -->
+<!-- <style>
+        .grade span {
+            margin-left: 15px;
+            line-height: 30px;
+        }
+
+        span {
+            width: 50%;
+            height: 70%;
+            padding: 0;
+            margin: 0 25%;
+        }
+
+        span li {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: url("") no-repeat; //这里输入灰色状态星星的图片链接
+        }
+
+        span li a {
+            height: 20px;
+            width: 10px;
+            display: inline-block;
+            display: block;
+            float: left;
+        }
+    </style> -->
+<!-- </style>
+            <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <style>
+                .rating {
+                    color: gold;
+                }
+            </style>
+        </head> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .rating {
+            color: gold;
+        }
+    </style>
+</head>-->
+
+<!-- 
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Document</title>
+    </head> -->
+
+<!-- <body>
+        <div class="card">
+            <div class="bookpicfirst" style="justify-content: space-evenly;">
+                <a href=""><img src="img/These Truths.png" alt="" width="200" height='250'>
+                    <div class="rating-box" style="color: gold;">
+                        <h1 class="rating-boxH1"></h1>
+                        <div class="rating">
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </div>
+                        <h4 id="rating-value">
+                            </h1>
+                    </div>
+                    <script src="rating.js"></script>
+
+                    <div class="rating-box" style="color: gold;">
+                        <h1 class="rating-boxH1"></h1>
+                        <div class="rating">
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </div>
+                        <h4 id="rating-value">
+                            </h1>
+                    </div>
+                    <script src="rating.js"></script>
+
+                    <div class="rating-box" style="color: gold;">
+                        <h1 class="rating-boxH1"></h1>
+                        <div class="rating">
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </div>
+                        <h4 id="rating-value">
+                            </h1>
+                    </div>
+                    <script src="rating.js"></script>
+                    <script>
+                        const stars = document.querySelector(".rating").children;
+                        let ratingValue
+                        let index
+                        document.getElementById("rating-value").innerHTML = ""
+                        for (let i = 0; i < stars.length; i++) {
+                            stars[i].addEventListener("mouseover", function () {
+
+                                document.getElementById("rating-value").innerHTML = ""
+                                for (let j = 0; j < stars.length; j++) {
+                                    stars[j].classList.remove("fa-star")
+                                    stars[j].classList.add("fa-star-o")
+                                }
+                                for (let j = 0; j <= i; j++) {
+                                    stars[j].classList.remove("fa-star-o")
+                                    stars[j].classList.add("fa-star")
+                                }
+                            })
+                            stars[i].addEventListener("click", function () {
+                                ratingValue = i + 1
+                                index = i
+                                document.getElementById("rating-value").innerHTML = " " + ratingValue
+                            })
+                            stars[i].addEventListener("mouseout", function () {
+                                for (let j = 0; j < stars.length; j++) {
+                                    stars[j].classList.remove("fa-star")
+                                    stars[j].classList.add("fa-star-o")
+                                }
+                                for (let j = 0; j <= index; j++) {
+                                    stars[j].classList.remove("fa-star-o")
+                                    stars[j].classList.add("fa-star")
+                                }
+                            })
+                        }
+                    </script> -->
+<!-- </body>
+
+    </html> -->
+
+<!-- </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="newbook">
+        <option value="新書介紹">新書介紹</option>
+        <option value="人文史地">人文史地</option>
+        <option value="社會科學">社會科學</option>
+        <option value="藝術">藝術</option>
+        <option value="文學">文學</option>
+    </select>
+    選項:<div id="card">
+        <div class="bookpicfirst" style="justify-content: space-evenly;">
+            <a href=""><img src="These Truths.png" style="margin-top: 40px;" width="200" height='250'>
+                <p style="margin-bottom:50px ;">真理的史詩</p>
+            </a>
+            <a href=""><img src="The Plantagenets2.png" alt="" width="200" height='200'>
+                <p>金雀花王朝</p>
+            </a>
+            <a href="bookpage.html"><img src="The Hollow Crown.png" alt="" width="200" height='200'>
+                <p>空王冠</p>
+            </a>
+            <a href=""><img src="france_history.png" alt="" width="200" height='200'>
+                <p>法蘭西全史</p>
+            </a>
+        </div>
+        <div class="bookpicfirst" style="justify-content: space-evenly;">
+            <a href=""><img src="The Crusades A History.png" alt="" width="190" height='200'>
+                <p>十字軍全史</p>
+            </a>
+            <a href=""><img src="Imperial Triumph.jpg" alt="" width="200" height='200'>
+                <p>帝國的勝利</p>
+            </a>
+            <a href="bookpage.html"><img src="spqr.jpg" alt="" width="190" height='200'>
+                <p>SPQR元老院</p>
+            </a>
+            <a href=""><img src="Visions of Empire.png" alt="" width="190" height='220'>
+                <p>帝國</p>
+            </a>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("newbook").innerText = e.taget.value;
+            document.getElementById("card").onchange = function (e) {
+                document.getElementById("newbook").innerText = e.target.value;
+            }
+        }) 
+
+
+
+</body>
+
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/v4-shims.js"></script>
+    <title>Document</title>
+    <style>
+        .search-box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2f3640;
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+        }
+
+        .search-box:hover>.search-txt {
+            width: 240px;
+            padding: 0 6px;
+        }
+
+        .search-box:hover>.search-btn {
+            background: white;
+            padding: 0 6px;
+        }
+
+        .search-btn {
+            color: white;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #2f3640;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+        }
+
+        .search-txt {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: aliceblue;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <img src="img/search.png" style="width: 20px;height: 20px; color: aliceblue;"></a>
+    </div>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://img1.doubanio.com/f/book/8011541306494bc2ff483299d952d9c65753c43d/css/book/master.css"
+        rel="stylesheet" type="text/css">
+
+    <link href="https://img1.doubanio.com/f/book/222a5c61e041638af8defc87cf97f4a863a77922/css/book/base/init.css"
+        rel="stylesheet"> -->
+<!-- <style type="text/css"></style>
+    <script
+        src="https://img1.doubanio.com/f/book/0495cb173e298c28593766009c7b0a953246c5b5/js/book/lib/jquery/jquery.js"></script>
+    <script src="https://img1.doubanio.com/f/shire/4888ee2fda6812f70a064a51c93b84fde8e4a3c2/js/douban.js"></script>
+    <script src="https://img1.doubanio.com/f/book/0322e3e810e475f1c82adb7d1c6ccfa1c0fa969c/js/book/master.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #666;
+            font-size: 12px;
+            font-family: '微软雅黑';
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #star {
+            position: relative;
+            width: 400px;
+            margin: 100px auto;
+            border: 1px solid red;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        #star h5 {
+            width: 100px;
+            margin: 0 auto;
+            line-height: 19px;
+            text-align: center;
+        }
+
+        #star ul {
+            margin: 20px 20px;
+            border: 1px saddlebrown solid;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        #star ul li {
+            float: left;
+            width: 27px;
+            height: 27px;
+            cursor: pointer;
+            background: url("img/star.gif") no-repeat;
+        }
+
+        #star li.active {
+            background-position: 0 -29px;
+        }
+
+        #star>p {
+            border: 1px solid red;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        #star>p>span {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="star clearfix">
+        <span class="allstar45"></span>
+        <span class="rating_nums">9.1</span> -->
+<!-- <div id="star">
+        <h5>点击星星就能打分</h5>
+        <ul>
+            <li class="active"><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+        </ul>
+        <p>显示文字信息:<span></span></p>
+    </div> -->
+<!-- <div id="div" style="color: gold;">
+        　　　　<span id="0">☆</span><span id="1">☆</span><span id="2">☆</span><span id="3">☆</span><span id="4">☆</span>
+    </div>
+    <div id="div" style="color: gold;">
+        　　　　<span id="0">☆</span><span id="1">☆</span><span id="2">☆</span><span id="3">☆</span><span id="4">☆</span>
+    </div>
+    <script>
+        var spans = document.getElementsByTagName("span");
+        var flag = 10;//這個值隨便取，只要不是01234就行
+        var Expand = function () {
+            //擴充套件程式碼，暫無
+        };
+
+        onload = function () {
+            //迴圈載入滑鼠移入事件
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].onmouseover = function () {
+                    var id = parseInt(this.id);
+                    for (var i = 0; i <= id; i++) {
+                        spans[i].innerHTML = "★";
+                    }
+                    for (var j = id + 1; j < 5; j++) {
+                        spans[j].innerHTML = "☆";
+                    }
+                };
+            }
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].onmouseover = function () {
+                    var id = parseInt(this.id);
+                    for (var i = 0; i <= id; i++) {
+                        spans[i].innerHTML = "★";
+                    }
+                    for (var j = id + 1; j < 5; j++) {
+                        spans[j].innerHTML = "☆";
+                    }
+                };
+            }
+            //迴圈載入滑鼠點選星星事件
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].onclick = function () {
+                    var id = parseInt(this.id);
+                    flag = id;
+                    for (var i = 0; i <= id; i++) {
+                        spans[i].innerHTML = "★";
+                    }
+                    Expand();//這裡是滑鼠點選星星的擴充套件，例如出現分值之類的，總之要擴充套件什麼隨你的大小便啦~
+                };
+            }
+            for (var i = 0; i < spans.length; i++) {
+                spans[i].onclick = function () {
+                    var id = parseInt(this.id);
+                    flag = id;
+                    for (var i = 0; i <= id; i++) {
+                        spans[i].innerHTML = "★";
+                    }
+                    Expand();//這裡是滑鼠點選星星的擴充套件，例如出現分值之類的，總之要擴充套件什麼隨你的大小便啦~
+                };
+            }
+            //載入滑鼠離開div事件
+            document.getElementById("div").onmouseout = function () {
+                //如果tag是3，則迴圈給把0 1 2 3幾個星星整黃
+                if (flag >= 0 && flag <= 4) {
+                    for (var i = 0; i <= flag; i++) {
+                        spans[i].innerHTML = "★";
+                    }
+                    for (var j = flag + 1; j < 5; j++) {
+                        spans[j].innerHTML = "☆";
+                    }
+                }
+                //如果tag沒有值或者是初值5，則把所有的星星還原成空星星
+                else {
+                    for (var i = 0; i < spans.length; i++) {
+                        spans[i].innerHTML = "☆";
+                    }
+                }
+                document.getElementById("div").onmouseout = function () {
+                    //如果tag是3，則迴圈給把0 1 2 3幾個星星整黃
+                    if (flag >= 0 && flag <= 4) {
+                        for (var i = 0; i <= flag; i++) {
+                            spans[i].innerHTML = "★";
+                        }
+                        for (var j = flag + 1; j < 5; j++) {
+                            spans[j].innerHTML = "☆";
+                        }
+                    }
+                    //如果tag沒有值或者是初值5，則把所有的星星還原成空星星
+                    else {
+                        for (var i = 0; i < spans.length; i++) {
+                            spans[i].innerHTML = "☆";
+                        }
+                    }
+                };
+            }; -->
+<!-- <script>
+        window.onload = function () {
+
+
+            var oStar = document.getElementById("star");
+
+            var oLi = oStar.getElementsByTagName("li");
+
+            var oUl = oStar.getElementsByTagName("ul")[0];
+
+            var oP = oStar.getElementsByTagName("p")[0];
+            var oSpan = oP.getElementsByTagName("span")[0];
+
+            var iScore = iStar = 0;
+
+            var message = ['很不满意', '不满意', '一般', '满意', '非常满意'];
+            var index = 0;
+
+            var onoff = false;
+            for (var i = 0; i < oLi.length; i++) {
+                oLi[i].index = i;
+                oLi[i].onmousemove = function () {
+                    oSpan.innerHTML = message[this.index];
+                    _showStar(this.index);
+                }
+                oLi[i].onmouseout = function () {
+                    if (onoff == false) {
+                        oSpan.innerHTML = "默认";
+                    }
+                    _showStar();
+                }
+
+                oLi[i].onclick = function () {
+                    iStar = this.index;
+                    index = this.index;
+                    onoff = true;
+                    if (onoff == true) {
+                        oSpan.innerHTML = message[this.index];
+                    }
+                }
+
+            }
+
+            oUl.onmouseout = function () {
+                oSpan.innerHTML = message[index];
+            }
+
+            function _showStar(_index) {
+                iScore = _index + 1 || iStar + 1
+                for (var i = 0; i < oLi.length; i++) {
+                    if (i < iScore) {
+                        oLi[i].className = 'active';
+                    } else {
+                        oLi[i].className = '';
+                    }
+                }
+            }
+
+        } -->
+</script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .stars-outer {
+            position: relative;
+            display: inline-block;
+        }
+
+        .stars-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+        }
+
+        .stars-outer::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: #ccc;
+        }
+
+        .stars-inner::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table-tablestriped">
+            <thead>
+                <tr>
+                    <th>4k</th>
+                    <th>rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="sony">
+                    <td>sony</td>
+                    <td>
+                        <div class="stars-outer">
+                            <div class="stars-inner"></div>
+                        </div>
+                        <span class="number-rating"></span>
+                    </td>
+                </tr>
+                <tr class="samsung">
+                    <td>samsung</td>
+                    <td>
+                        <div class="stars-outer">
+                            <div class="stars-inner"></div>
+                        </div>
+                        <span class="number-rating"></span>
+                    </td>
+                </tr>
+                <tr class="vizio">
+                    <td>vizio</td>
+                    <td>
+                        <div class="stars-outer">
+                            <div class="stars-inner"></div>
+                        </div>
+                        <span class="number-rating"></span>
+                    </td>
+                </tr>
+                <tr class="panasonic">
+                    <td>panasonic</td>
+                    <td>
+                        <div class="stars-outer">
+                            <div class="stars-inner"></div>
+                        </div>
+                        <span class="number-rating"></span>
+                    </td>
+                </tr>
+                <tr class="phillips">
+                    <td>phillips</td>
+                    <td>
+                        <div class="stars-outer">
+                            <div class="stars-inner"></div>
+                        </div>
+                        <span class="number-rating"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        const ratings = {
+            sony: 4.7,
+            samsung: 3.4,
+            vizio: 2.3,
+            panasoni: 3.6
+            phillips: 4.1
+        }
+
+        const starsTotal = 5;
+
+        document.addEventListener('DOMContentLoaded', getRatings);
+
+        function getRatings() {
+            for (let rating in ratings) {
+                const starPercentage = (ratings[rating] /
+                    starsTotal) * 100;
+
+                const starPercentageRounded = `${Math.round
+                    (starPercentage / 10) * 10}%`;
+
+                document.querySelector(`.${rating}.stars-inner`).style.width =
+                    starPercentageRounded;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset css.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="css/rwd.css">
+    <style>
+        #menu_control {
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        .header {
+            height: 50px;
+            background-color: black;
+            position: relative;
+        }
+
+        .logo {
+            margin-left: 10px;
+        }
+
+        .logo a {
+            display: block;
+            height: 40px;
+        }
+
+        .logo img {
+            vertical-align: block;
+            width: 60px;
+            height: 40px;
+
+        }
+
+        .menu_btn {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: 10px;
+        }
+
+        .menu_btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px white,
+                0px -8px 0px white;
+        }
+
+        nav {
+            width: 80%;
+            height: calc(100vh -50px);
+            background-color: black;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid white;
+        }
+
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+
+        @media screen and (max-width:767px) {
+            nav {
+                width: 80%;
+                height: calc(100vh -50px);
+                background-color: black;
+                position: absolute;
+                top: 50px;
+                left: -100%;
+                transition: .5s;
+            }
+        }
+
+        /* @media screen and (min-width:768px) {
+            .menu_btn {
+                display: none;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                background-color: black;
+                align-items: center;
+            }
+
+            .logo {
+                margin-top: 0;
+            }
+
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+
+            nav a {
+                border-bottom: none;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="img/logo2.png"></a>
+        </h1>
+        <span class="the">THE</span>
+        <span class="reader" style="color: aliceblue;">Reader</span>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">新書</a>
+            <a href="#">中文</a>
+            <a href="#">外文</a>
+            <a href="#">購書</a>
+            <a href="#">TOP10</a>
+        </nav>
+    </div>
+    <div class="carousel">
+        <div class="container">
+            <a href="" target="_blank"><img src="img/The Plantagenets.png" /></a>
+            <a href="" target="_blank"><img src="img/These Truths A History of the United States.png" /></a>
+            <!-- <a href="" target="_blank"><img src="Group 104.png" /></a> -->
+            <a href="" target="_blank"><img src="img/francehistory.png" /></a>
+        </div>
+        <div class="shift">
+            <div class="btn left" onclick="leftshift()">&lt;</div>
+            <div class="btn right" onclick="rightshift()">&gt;</div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <div class="card">
+        <div class="bookpicfirst">
+            <a href=""><img src="img/These Truths.png" style="margin-top: 40px;" width="200" height='200'>
+                <p style="margin-bottom:50px ;">真理的史詩</p>
+            </a>
+            <a href=""><img src="img/The Plantagenets2.png" width="200" height='200' style="margin-top: 40px;">
+                <p>金雀花王朝</p>
+            </a>
+        </div>
+        <div class="bookpicfirst">
+            <a href="bookpage.html"><img src="img/The Hollow Crown.png" alt="" width="200" height='200'>
+                <p style="margin-bottom:50px">空王冠</p>
+            </a>
+            <a href=""><img src="img/france_history.png" alt="" width="200" height='200'>
+                <p style="margin-bottom:50px">法蘭西全史</p>
+            </a>
+        </div>
+        <div class="bookpicfirst">
+            <a href=""><img src="img/The Crusades A History.png" alt="" width="190" height='200'>
+                <p style="margin-bottom:50px">十字軍全史</p>
+            </a>
+            <a href=""><img src="img/Imperial Triumph.jpg" alt="" width="200" height='200'>
+                <p style="margin-bottom:50px">帝國的勝利</p>
+            </a>
+        </div>
+        <div class="bookpicfirst">
+            <a href="bookpage.html"><img src="img/spqr.jpg" alt="" width="190" height='200'>
+                <p style="margin-bottom:50px">SPQR元老院</p>
+            </a>
+            <a href=""><img src="img/Visions of Empire.png" alt="" width="190" height='220'>
+                <p style="margin-bottom:50px">帝國</p>
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let index = 0
+
+            let imageCount = document.querySelectorAll(
+                ".carousel .container img"
+            ).length
+
+            const bottom = document.querySelector(".carousel .bottom")
+            for (let i = 0; i < imageCount; i++) {
+                const indicator = document.createElement("div")
+                indicator.classList.add("indicator")
+                indicator.onclick = () => setIndex(i)
+
+                bottom.append(indicator)
+            }
+
+            setInterval(() => {
+                index++
+                refresh()
+            }, 3000)
+
+            function refresh() {
+                if (index < 0) {
+
+                    index = imageCount - 1
+                } else if (index >= imageCount) {
+
+                    index = 0
+                }
+                let carousel = document.querySelector(".carousel")
+
+                // 注意
+                let width = getComputedStyle(carousel).width
+                width = Number(width.slice(0, -2))
+                console.log(width)
+
+                carousel.querySelector(".container").style.left =
+                    index * width * -1 + "px"
+            }
+            let refreshWrapper = (func) => {
+                return function (...args) {
+                    let result = func(...args)
+                    refresh()
+                    return result
+                }
+            }
+
+            let leftshift = refreshWrapper(() => {
+                index--
+            })
+            let rightshift = refreshWrapper(() => {
+                index++
+            })
+
+            let setIndex = refreshWrapper((idx) => {
+                index = idx
+            })
+            refresh()
+        </script>
+
+</body>
+
+</html>
