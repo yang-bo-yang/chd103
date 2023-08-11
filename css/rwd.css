@@ -1,0 +1,15 @@
+.the{
+    color: aliceblue;
+}
+.reader{ 
+    font-family: 'Chomsky', sans-serif;
+}
+
+.bookpicfirst{
+    justify-content: space-evenly;
+    display: flex;
+}
+.bookpicfirst a{
+    text-decoration: none;
+    color: black;
+}
