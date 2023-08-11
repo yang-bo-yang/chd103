@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購書</title>
+    <link rel="stylesheet" href="reset css.css">
+    <link rel="stylesheet" href="css/rwd.css">
+    <link rel="icon" href="img/favicon.ico" />
+    <style>
+        #menu_control {
+            position: absolute;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        .header {
+            height: 50px;
+            background-color: black;
+            position: relative;
+        }
+
+        .logo {
+            margin-left: 10px;
+        }
+
+        .logo a {
+            display: block;
+            height: 40px;
+        }
+
+        .logo img {
+            vertical-align: block;
+            width: 60px;
+            height: 40px;
+
+        }
+
+        .menu_btn {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: 10px;
+        }
+
+        .menu_btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px white,
+                0px -8px 0px white;
+        }
+
+        nav {
+            width: 80%;
+            height: calc(100vh -50px);
+            background-color: black;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid white;
+        }
+
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+
+        .bookpicfirst p {
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .item P {
+            font-weight: bold;
+        }
+
+        @media screen and (max-width:767px) {
+            .item {
+                width: 300px;
+                height: 500px;
+                /* background-color: white; */
+                text-align: center;
+                align-items: center;
+                /* float: left; */
+                /* display: flex; */
+                margin-left: 20%;
+                margin-top: 10%;
+            }
+
+
+            .the {
+                position: relative;
+                bottom: 60%;
+                left: 20%;
+                display: flex;
+            }
+
+            .reader {
+                position: relative;
+                bottom: 65%;
+                font-size: 25px;
+                display: flex;
+                left: 25%;
+            }
+
+            .title {
+                /* background-color: black;
+                height: 5%;
+                position: relative; */
+                display: none;
+                /* color: aliceblue; */
+            }
+
+            nav {
+                width: 80%;
+                height: calc(100vh -50px);
+                background-color: black;
+                position: absolute;
+                top: 50px;
+                left: -100%;
+                transition: .5s;
+            }
+
+            .search-box {
+                position: absolute;
+                left: 45%;
+                bottom: 20%;
+                width: 10px;
+                display: flex;
+            }
+
+            .search-txt {
+                width: 120px;
+            }
+
+            .search-btn img {
+                background-color: aliceblue;
+                border-radius: 20%;
+
+            }
+
+            .newbook {
+                margin: 10px;
+            }
+
+            .newbook a {
+                text-decoration: none;
+                color: aliceblue;
+            }
+
+            .newbook span {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 30px;
+                margin-right: 5px;
+                background-color: black;
+                padding: 10px;
+                border-radius: 20px;
+            }
+
+            .bookpicfirst {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .reviewtitle {
+                font-size: 25px;
+                width: 23%;
+                color: white;
+                margin-top: 50px;
+                margin-left: 35%;
+                background-color: black;
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            .reviewimg img {
+                width: 30%;
+                height: 30%;
+                margin: 30px;
+                margin-top: 30px;
+                justify-items: center;
+            }
+
+            .reviewimg a {
+                color: black;
+                font-size: 12px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .reviewimg span {
+                color: black;
+                font-size: 20px;
+            }
+
+            .reviewimg {
+                margin-top: 20px;
+                padding-left: -20px;
+                border-radius: 20px;
+            }
+
+            .rating {
+                color: gold;
+                font-size: 40px;
+            }
+
+            .rating span {
+                color: black;
+                font-size: 20px;
+                margin-right: 20px;
+            }
+
+            .detailsrow {
+                background-color: #B50000;
+                color: white;
+                width: 20%;
+                font-size: 20px;
+                margin-top: 3%;
+                margin-bottom: 10px;
+                padding: 1%;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+            }
+
+            /* .commodityframe {
+                border: 1px solid black;
+                border-radius: 10px
+            } */
+
+            .commodityframe p {
+                margin-left: 20px;
+            }
+
+            .dividingline {
+                border-bottom: 3px solid black;
+                width: 100%;
+                margin-left: 10%;
+                margin-top: 10%;
+            }
+
+            .total {
+                display: none;
+            }
+
+            .shooppingrow {
+                display: none;
+            }
+
+            .checkoutbtn {
+                display: none;
+            }
+
+            .commodityframedown {
+                border: 1px solid black;
+                margin-bottom: 20px;
+            }
+
+            .checkoutbtn a {
+                display: none;
+            }
+
+
+            footer {
+                display: none;
+            }
+
+            .foot a {
+                display: none;
+            }
+
+            .rwdscoreandbuy {
+                display: flex;
+                background-color: #00206a;
+                color: aliceblue;
+                padding: 5%;
+                /* padding-left: 10%;
+                padding-right: 10%; */
+                width: 70%;
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+            .stock {
+                display: none;
+            }
+
+            .delete {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .rwdscoreandbuy {
+                display: none;
+            }
+
+            .delete {
+                color: white;
+                font-size: 20px;
+                background-color: #B50000;
+                border: white;
+                margin-left: 160px;
+                height: 50px;
+                width: 100px;
+                text-align: center;
+                padding-top: 5px;
+                border-radius: 10px;
+                text-decoration: none;
+            }
+
+            .title {
+                background-color: black;
+                height: 5%;
+                position: relative;
+                display: flex;
+            }
+
+            .the {
+                position: absolute;
+                left: 250px;
+                bottom: 50px;
+                font-size: 20px;
+            }
+
+            .reader {
+                position: absolute;
+                left: 280px;
+                bottom: 10px;
+                font-size: 40px;
+            }
+
+            .webname {
+                color: aliceblue;
+            }
+
+            .title nav a {
+                margin-right: 20px;
+                padding: 5px;
+                color: white;
+                display: flex;
+                display: inline;
+                text-decoration: none;
+                justify-content: flex-end;
+                position: relative;
+                top: 0;
+                left: 190%;
+            }
+
+            .secondtitle {
+                background-color: black;
+                padding: 20px;
+                position: relative;
+                display: flex;
+
+            }
+
+            .search-box {
+                transform: translate(-50%, -50%);
+                background: #2f3640;
+                height: 40px;
+                border-radius: 40px;
+                padding: 10px;
+                position: absolute;
+                top: 10px;
+                left: 50%;
+            }
+
+            .search-box:hover>.search-txt {
+                width: 240px;
+                padding: 0 6px;
+            }
+
+            .search-box:hover>.search-btn {
+                background: white;
+                padding: 0 6px;
+            }
+
+            .search-btn {
+                color: white;
+                float: right;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #2f3640;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 1s;
+            }
+
+            .search-txt {
+                border: none;
+                background: none;
+                outline: none;
+                float: left;
+                padding: 0;
+                color: aliceblue;
+                font-size: 16px;
+                transition: 0.4s;
+                line-height: 40px;
+                width: 0px;
+            }
+
+            .webpagelost {
+                display: none;
+            }
+
+            .menu_btn {
+                display: none;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                background-color: black;
+                align-items: center;
+            }
+
+            .logo {
+                margin-top: 0;
+            }
+
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+
+            nav a {
+                border-bottom: none;
+            }
+
+            .detailsrow {
+                background-color: #B50000;
+                color: white;
+                width: 20%;
+                font-size: 20px;
+                margin-top: 3%;
+                margin-left: 10%;
+                margin-bottom: 10px;
+                padding: 1%;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .shooppingrow {
+                margin-top: 10%;
+
+            }
+
+            .shooppingrow span {
+                background-color: #00206a;
+                margin-left: 126px;
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 50px;
+                color: aliceblue;
+            }
+
+            .commodityframe {
+                border: 2px solid rgb(209, 210, 209);
+                margin-left: 128px;
+                margin-right: 110px;
+                margin-top: 20px;
+                display: flex;
+            }
+
+            .commodityframe p {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+
+            span .discount {
+                color: #00206a;
+            }
+
+            .shoopbookname p {
+                padding-right: 30px;
+            }
+
+            .qty {
+                width: 40px;
+                height: 35px;
+                text-align: center;
+                border: 0;
+                border-top: 1px solid #aaa;
+                border-bottom: 1px solid #aaa;
+            }
+
+            input.qtyplus {
+                width: 25px;
+                height: 35px;
+                border: 1px solid #aaa;
+                background: #f8f8f8;
+            }
+
+            input.qtyminus {
+                width: 25px;
+                height: 35px;
+                border: 1px solid #aaa;
+                background: #f8f8f8;
+            }
+
+            .buycolorblock {
+                background-color: #00206a;
+                width: 79%;
+                padding: 15px;
+                margin-left: 127px;
+                margin-top: 20px;
+                font-size: 30px;
+                border-radius: 10px;
+            }
+
+            .total {
+                padding-left: 80%;
+            }
+
+            .total span {
+                color: #F28500;
+                font-size: 40px;
+            }
+
+            .total p {
+                color: white;
+                font-size: 20px;
+
+            }
+
+            .commodityframedown {
+                border: 2px solid rgb(209, 210, 209);
+                margin-left: 128px;
+                margin-right: 110px;
+                margin-top: 20px;
+                display: flex;
+            }
+
+            .checkoutbtn {
+                background-color: gold;
+                width: 150px;
+                height: 50px;
+                font-size: 40px;
+                padding-top: 15px;
+                margin-top: 20px;
+                margin-left: 80%;
+                margin-bottom: 20%;
+                border-radius: 20px;
+                text-align: center;
+            }
+
+            .checkoutbtn a {
+                text-decoration: none;
+                color: white;
+            }
+
+            footer {
+                background-color: black;
+                padding-bottom: 30px;
+                padding-top: 30px;
+                height: 30%;
+            }
+
+            .foot a {
+                text-decoration: none;
+                font-size: 30px;
+                color: aliceblue;
+            }
+
+            .rwdscoreandbuy div {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <span class="webname">The Reader 閱讀者</span>
+            <nav class="toprow">
+                <a href="#">使用說明</a>
+                <a href="#">常見問題</a>
+                <a href="#">關於我們</a>
+                <a href="login.html">會員登入</a>
+            </nav>
+        </div>
+        <input type="checkbox" name="" id="menu_control">
+        <div class="header">
+            <h1 class="logo">
+                <a href="index rwd.html"><img src="img/logo2.png"></a>
+            </h1>
+            <span class="the">THE</span>
+            <span class="reader" style="color: aliceblue;">Reader</span>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="書名、作者">
+                <a class="search-btn" href="#">
+                    <img src="img/search.png" style="width: 20px;height: 20px; "></a>
+            </div>
+            <nav>
+                <a href="login.html" class="webpagelost">會員登入</a>
+                <a href="#">新書</a>
+                <a href="chbook.html">中文</a>
+                <a href="#">外文</a>
+                <a href="top10.html">本週排行</a>
+            </nav>
+    </header>
+
+    <div class="rwdscoreandbuy" style="justify-content: space-evenly;position:fixed;bottom: 0;display: flex;">
+        <div>共1項商品<span style="color: #F28500;">$560</span>
+            <a href=""
+                style="text-decoration:none;color: aliceblue;align-items: center;width: 50px;height: 50px;background-color: #aaa;padding: 10px;border-radius:20px ; ">刪除</a>
+            <a href="transportInformation.html"
+                style="text-decoration:none;color: aliceblue;align-items: center;width: 50px;height: 50px;background-color: gold;padding: 10px;border-radius:20px ;">結帳</a>
+        </div>
+    </div>
+
+    <div class="shooppingrow">
+        <span><span></span>商品明細<span>價格<span>數量<span>庫存</span></span><span>變更明細</span></span></span></span>
+    </div>
+    <div class="commodityframe">
+        <img src="img/The Hollow Crown.png" alt="The Hollow Crown" width="200" height='200'>
+        <p style="padding-right: 80px;font-size: 30px;">空王冠</p>
+        <!-- <div class="discount" style="color: black;font-size:10px ;">優惠期限至2023/7/28</div> -->
+        <p style="padding-right: 120px;font-size: 20px;">$560</p>
+        <input id="inc" type="button" value="-" style="height: 30px;width: 20px;">
+        <input id="count" type="text" value="1" size="1" style="text-align:center;height: 25px;width: 20px;">
+        <input id="dec" type="button" value="+" style="height: 30px;width: 20px;">
+        <script type="text/javascript" src="post.js"></script>
+        <p class=stock style="margin-left: 130px;">有</p>
+        <button class="delete"><a href="#" style="text-decoration: none;color: aliceblue;">刪除</a></button>
+    </div>
+    </div>
+    <div class="buycolorblock">
+        <div class="total">
+            <p>共<span>1</span>項商品，數量<span>1</span>個</p>
+            <p>運費 NT$<span>30</span>元</p>
+            <p>金額 NT$<span>590</span>元</p>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="detailsrow">
+            重要提醒
+        </div>
+        <div class="commodityframedown">
+            <ul>
+                <li>選擇『便利商店取貨』，單次實際付款金額未滿350元加收40元處理費</li>
+                <li>選擇『宅配到府』，單次實際付款金額未滿490元加收75元處理費，490～999元加收50元處理費；滿1,000元免處理費(金額計算，不包含滿額出貨廠商區)。</li>
+                <li>商品體積較大或多於15項，可能不適用『便利商店取貨』。</li>
+                <li>結帳選項若無出現「海外店取」，可能是購買商品不適用此服務。</li>
+                <li>海外郵資運費計算。</li>
+                <li>選擇『宅配到府』，訂購品項皆有『快速到貨』標籤且商品、贈品皆有庫存，於當日00:00~09:00付款完成(週六、週日及國定假日不適用此方案)，配送地點為【台北市/新北市/基隆市】地區即符合快速到貨服務。
+                </li>
+            </ul>
+        </div>
+        <div class="checkoutbtn"><a href="transportInformation.html">結帳</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="publishinghouse" style="display: flex;justify-content: space-evenly;">
+                <a href="https://www.bookrep.com.tw/?md=gwindex&cl=index&at=index">讀書共和國</a>
+                <a href="https://www.cite.com.tw/publisher/about/17">馬可孛羅</a>
+                <a href="https://www.linkingbooks.com.tw/LNB/index.aspx">聯經</a>
+                <a href="https://www.cite.com.tw/publisher/about/13">貓頭鷹</a>
+                <a href="https://www.cite.com.tw/publisher/about/1">麥田</a>
+            </div>
+    </footer>
+</body>
+
+</html>
