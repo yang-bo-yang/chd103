@@ -140,14 +140,14 @@
             }
 
             .the {
-                position: relative;
-                bottom: 83%;
+                position: absolute;
+                bottom: 60%;
                 left: 20%;
             }
 
             .reader {
-                position: relative;
-                bottom: 80%;
+                position: absolute;
+                bottom: 20%;
                 font-size: 25px;
                 left: 25%;
                 font-family: 'Chomsky', sans-serif;
@@ -229,10 +229,11 @@
                 width: 30%;
                 color: white;
                 margin-top: 50px;
-                margin-left: 35%;
+                margin-left: 30%;
                 background-color: black;
                 padding: 20px;
                 border-radius: 20px;
+                text-align: center;
             }
 
             .reviewimg img {
@@ -263,7 +264,7 @@
 
             .rating {
                 color: gold;
-                font-size: 40px;
+                font-size: 20px;
             }
 
             .rating span {
@@ -340,6 +341,9 @@
                 color: aliceblue;
             }
 
+            .star {
+                margin-right: 40px;
+            }
         }
 
         @media screen and (min-width:768px) {
@@ -362,7 +366,6 @@
                 left: 280px;
                 bottom: 10px;
                 font-size: 40px;
-                
             }
 
             .webname {
@@ -436,8 +439,6 @@
                 line-height: 40px;
                 width: 0px;
             }
-
-
 
             .webpagelost {
                 display: none;
@@ -548,7 +549,10 @@
                 background-color: white;
                 text-align: center;
                 float: left;
+            }
 
+            .item2 p {
+                font-weight: bold;
             }
 
             .item2>img {
@@ -608,7 +612,7 @@
 
             .rating {
                 color: gold;
-                font-size: 40px;
+                font-size: 20px;
             }
 
             .rating span {
@@ -686,6 +690,9 @@
                 color: aliceblue;
             }
 
+            .star {
+                margin-left: 20px;
+            }
         }
     </style>
 </head>
@@ -740,87 +747,74 @@
     <div class="itemView" style="flex-wrap: wrap;">
         <div class="wrap">
             <div class="item">
-                <p style="background-color: black;padding: 10px;color: white;border-radius: 20px;position: absolute;">
+                <p
+                    style="background-color: black;padding: 10px;color: white;border-radius: 20px;position: absolute;z-index: -1;">
                     新書介紹</p>
-                <img src="img/Singapore.png">
-                <div class="rating">4<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Singapore.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>新加坡的非典型崛起</p>
-                <img src="img/Listen to Me.png">
-                <div class="rating">2<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Listen to Me.png" style="width: 150px;height: 200px;"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>護理師</p>
             </div>
             <div class="item">
-                <img src="img/CHIP WAR.png">
-                <div class="rating">3<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/CHIP WAR.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>晶片戰爭</p>
-                <img src="img/Why We Sleep.png">
-                <div class="rating">1<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Why We Sleep.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>為什麼要睡覺</p>
             </div>
             <div class="item">
-                <img src="img/1984.png">
-                <div class="rating">5<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/1984.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>1984</p>
-                <img src="img/privilege.png">
-                <div class="rating">3<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/privilege.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>致富的特權</p>
             </div>
             <div class="item">
-                <img src="img/Roller-Coaster Europe.png">
-                <div class="rating">2<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Roller-Coaster Europe.png"
+                        style="width: 150px;height: 200px;"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>激盪時代</p>
-                <img src="img/Big Science.png">
-                <div class="rating">3<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Big Science.png" style="width: 150px;height: 200px;"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>大科學</p>
             </div>
             <div class="item2">
                 <p style="background-color: black;padding: 10px;color: white;border-radius: 20px;position: absolute;">
                     人文史地</p>
-                <img src="img/These Truths.png">
-                <div class="rating">2<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/These Truths.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>真理的史詩</p>
-                <img src="img/The Plantagenets2.png">
-                <div class="rating">2<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/The Plantagenets2.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>金雀花王朝</p>
             </div>
             <div class="item2">
-                <a href="#"><img src="img/The Crusades A History.png"></a>
-                <div class="rating">3<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/The Crusades A History.png"
+                        style="width: 150px;height: 200px;"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>十字軍戰爭全史</p>
-                <img src="img/The Hollow Crown.png">
-                <div class="rating">5<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/The Hollow Crown.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>空王冠</p>
             </div>
             <div class="item2">
-                <img src="img/france_history.png">
-                <div class="rating">2<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/france_history.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>法蘭西全史</p>
-                <img src="img/Imperial Triumph.jpg">
-                <div class="rating">1<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Imperial Triumph.jpg" style="width: 150px;height: 200px;"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>帝國的勝利</p>
             </div>
             <div class="item2">
-                <img src="img/spqr.jpg">
-                <div class="rating">2<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/spqr.jpg" style="width: 150px;height: 200px;"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>SPQR元老院</p>
-                <img src="img/Visions of Empire.png">
-                <div class="rating">1<span>/5</span>
-                </div>
+                <a href="bookpage.html"><img src="img/Visions of Empire.png"></a>
+                <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
                 <p>帝國</p>
             </div>
         </div>
@@ -831,7 +825,7 @@
         <input type="button" id="btnRight" value=">" style="font-weight:bold;font-size:20px">
     </div>
     <script type="text/javascript" src="slider.js"></script>
-    </div>
+
 
 
 
@@ -839,7 +833,6 @@
         <div class="reviewtitle">熱門短評</div>
         <div class="reviewimg" style="justify-content: center;">
             <img src="img/The Plantagenets2.png">
-            <!-- <img src="img/richard.webp" style="border-radius: 20px;"> -->
             <a href="#"><span>
                     Kaiser:
 
@@ -866,21 +859,24 @@
         <div class="card">
             <div class="wbest">
                 <div class="weeklybest">
-                    <a href=""><img src="img/Bloodlands.png" alt="Bloodlands" width="300" height='300'>
+                    <a href="bookpage.html"><img src="img/Bloodlands.png" alt="Bloodlands" width="300" height='300'>
                         <p>血色大地</p>
-                        <div class="weeklybestrating">5<span>/5</span>
+                        <div class="star"><img src="img/star.png" style="width: 20px;height: 20px;"><span
+                                class="rating">4.3</span>
                         </div>
                     </a>
-                    <a href=""><img src="img/The Reconstruction of Nations.png" alt="Reconstruction" width="300"
-                            height='300'>
+                    <a href="bookpage.html"><img src="img/The Reconstruction of Nations.png" alt="Reconstruction"
+                            width="300" height='300'>
                         <p>民族重建</p>
-                        <div class="weeklybestrating">4<span>/5</span>
+                        <div class="star"><img src="img/star.png" style="width: 20px;height: 20px;"><span
+                                class="rating">4.3</span>
                         </div>
                     </a>
-                    <a href=""><img src="img/China Marches West.png.png" alt="China Marches West" width="300"
-                            height='300'>
+                    <a href="bookpage.html"><img src="img/China Marches West.png.png" alt="China Marches West"
+                            width="300" height='300'>
                         <p>中國西征</p>
-                        <div class="weeklybestrating">4<span>/5</span>
+                        <div class="star"><img src="img/star.png" style="width: 20px;height: 20px;"><span
+                                class="rating">4.3</span>
                         </div>
                     </a>
                 </div>
