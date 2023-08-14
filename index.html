@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="css/rwd.css">
     <link rel="icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="">
+    <link href="https://fonts.cdnfonts.com/css/chomsky" rel="stylesheet">
 
     <style>
         #menu_control {
@@ -467,6 +467,7 @@
                 height: auto;
                 top: 0;
                 background-color: transparent;
+                justify-content: flex-end;
             }
 
             nav a {
@@ -693,6 +694,12 @@
             .star {
                 margin-left: 20px;
             }
+
+            .toprow a {
+                justify-content: end;
+            }
+
+
         }
     </style>
 </head>
@@ -724,16 +731,16 @@
         </div>
         <nav>
             <a href="login.html" class="webpagelost">會員登入</a>
-            <a href="#">新書</a>
+            <a href="chbook.html">新書</a>
             <a href="chbook.html">中文</a>
-            <a href="#">外文</a>
+            <a href="chbook.html">外文</a>
             <a href="top10.html">本週排行</a>
         </nav>
 
     </div>
     <div class="carousel">
         <div class="container">
-            <a href="" target="_blank"><img src="img/The Plantagenets.png" /></a>
+            <a href="bookpage.html" target="_blank"><img src="img/The Plantagenets.png" /></a>
             <a href="" target="_blank"><img src="img/These Truths A History of the United States.png" /></a>
             <a href="" target="_blank"><img src="img/francehistory.png" /></a>
         </div>
@@ -747,8 +754,7 @@
     <div class="itemView" style="flex-wrap: wrap;">
         <div class="wrap">
             <div class="item">
-                <p
-                    style="background-color: black;padding: 10px;color: white;border-radius: 20px;position: absolute;z-index: -1;">
+                <p style="background-color: black;padding: 10px;color: white;border-radius: 20px;position: absolute;">
                     新書介紹</p>
                 <a href="bookpage.html"><img src="img/Singapore.png"></a>
                 <div><img src="img/star.png" style="width: 20px;height: 20px;"><span class="rating">4.3</span></div>
@@ -830,10 +836,10 @@
 
 
     <div class="review">
-        <div class="reviewtitle">熱門短評</div>
+        <div class="reviewtitle" style="text-align: center;">熱門短評</div>
         <div class="reviewimg" style="justify-content: center;">
             <img src="img/The Plantagenets2.png">
-            <a href="#"><span>
+            <a href="bookpage.html"><span>
                     Kaiser:
 
                     可讀性比較高，並非按學術作品的規格來寫作，但在保持趣味性的同時依然盡量摒除了野史八卦
@@ -845,7 +851,7 @@
         <div class="dividingline"></div>
         <div class="reviewimg" style="justify-content: center;">
             <img src="img/france_history.png">
-            <a href=""><span>
+            <a href="bookpage.html"><span>
                     Kaiser:
 
                     可讀性比較高，並非按學術作品的規格來寫作，但在保持趣味性的同時依然盡量摒除了野史八卦
@@ -854,7 +860,8 @@
                     2023/7/30 <strong style="font-weight: bold;">評法蘭西全史</strong></span></a>
         </div>
         <div class="dividingline"></div>
-        <div class="weeklybesttitle"><a href="top10.html" style="color: aliceblue; text-decoration: none;">本週排行</a>
+        <div class="weeklybesttitle" style="text-align: center;"><a href="top10.html"
+                style="text-align: center; color: aliceblue; text-decoration: none;">本週排行</a>
         </div>
         <div class="card">
             <div class="wbest">
